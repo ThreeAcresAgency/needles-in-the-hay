@@ -1,0 +1,137 @@
+{% comment %}
+  Section: Staff List
+  Displays all active staff metaobjects with name, image, and description.
+  Layout: Name top left, image below (1/4), description right (3/4).
+  Staff are sorted alphabetically by name.
+{% endcomment %}
+
+{% assign all_staff = shop.metaobjects.staff.values %}
+{% assign staff_sorted = all_staff | sort: "name" %}
+
+<div class="section section--{{ section.settings.section_width }}" style="{% render 'spacing-padding', settings: section.settings %}">
+  <div class="staff-list">
+    {% if staff_sorted.size > 0 %}
+      {% for staff in staff_sorted %}
+        <div class="staff-list__item">
+          <div class="staff-list__header">
+            <h2>{{ staff.name }}</h2>
+          </div>
+          <div class="staff-list__body">
+            <div class="staff-list__image-wrapper">
+              {% if staff.image != blank %}
+                <img class="staff-list__image" src="{{ staff.image | image_url: width: 400 }}" alt="{{ staff.name }}" loading="lazy">
+              {% endif %}
+            </div>
+            <div class="staff-list__description rte">
+              {{ staff.description | metafield_tag }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="staff-list__empty">
+        <p>No staff members found. Please add staff metaobjects in your Shopify admin.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% stylesheet %}
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.staff-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border, #e5e5e5);
+  padding-bottom: 2rem;
+}
+.staff-list__header {
+  margin-bottom: 0.5rem;
+}
+.staff-list__body {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.staff-list__image-wrapper {
+  flex: 0 0 25%;
+  max-width: 200px;
+}
+.staff-list__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.staff-list__description {
+  flex: 1 1 75%;
+}
+.staff-list__empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-secondary, #666);
+}
+@media (max-width: 750px) {
+  .staff-list__body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .staff-list__image-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Staff List",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        { "value": "page-width", "label": "Page width" },
+        { "value": "full-width", "label": "Full width" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Staff List"
+    }
+  ]
+}
+{% endschema %} 

@@ -1,0 +1,112 @@
+{% liquid
+  assign product_resource = block.settings.product
+  if product_resource == blank
+    assign product_resource = product
+  endif
+
+  if request.visual_preview_mode and product_resource == blank
+    assign product_resource = collections.all.products.first
+  endif
+-%}
+
+{% if product_resource and product_resource != empty %}
+  {% render 'swatch-variant-main-picker', product_resource: product_resource, block: block %}
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Swatch variant picker",
+    "tag": "div",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "t:content.edit_variants_in_theme_settings"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "t:settings.product"
+      },
+
+      {
+        "type": "checkbox",
+        "id": "show_variant_images",
+        "label": "Show variant images as swatches",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "image_swatch_option_names",
+        "label": "Show images for specific option types",
+        "info": "Enter option names separated by commas (e.g., 'Color, Colour, Colourway'). Use 'all' to show images for all option types.",
+        "default": "all"
+      },
+      {
+        "type": "select",
+        "id": "alignment",
+        "label": "t:settings.alignment",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }, {
+        "type": "header",
+        "content": "t:content.padding"
+      }, {
+        "type": "range",
+        "id": "padding-block-start",
+        "label": "t:settings.top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "padding-block-end",
+        "label": "t:settings.bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 8
+      }, {
+        "type": "range",
+        "id": "padding-inline-start",
+        "label": "t:settings.left",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "padding-inline-end",
+        "label": "t:settings.right",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Swatch variant picker",
+        "category": "Product",
+        "settings": {
+          "product": "{{ closest.product }}"
+        }
+      }
+    ]
+  }
+{% endschema %}
