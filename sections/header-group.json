@@ -17,7 +17,7 @@
         "announcement_mxxhta": {
           "type": "_announcement",
           "settings": {
-            "text": "Worried you won't receive your order? Shipping exclusively through UPS during the Canada Post Strike.",
+            "text": "Free shipping on all domestic orders of $225 before tax",
             "link": "shopify://policies/shipping-policy",
             "font": "var(--font-primary--family)",
             "font_size": "0.875rem",
@@ -63,7 +63,7 @@
             "custom_height": 100,
             "custom_height_mobile": 100,
             "padding-block-start": 21,
-            "padding-block-end": 40,
+            "padding-block-end": 21,
             "padding-inline-start": 10,
             "padding-inline-end": 21
           },
@@ -99,7 +99,7 @@
         }
       },
       "custom_css": [
-        ".header-logo__image-container{padding: 15px;}"
+        ".header-logo__image-container {padding: 15px;}"
       ],
       "settings": {
         "logo_position": "left",

@@ -57,7 +57,16 @@ export default class VariantPicker extends Component {
 
     // Change the path if the option is connected to another product via combined listing.
     if (loadsNewProduct) {
-      url.pathname = newUrl;
+      // Ensure we only set the pathname, not an encoded path that includes a query string
+      // Some data attributes may include a query (e.g. ?variant=...), which would be encoded
+      // into the pathname if assigned directly. Parse and use only the pathname.
+      try {
+        const parsedNewUrl = new URL(newUrl, window.location.origin);
+        url.pathname = parsedNewUrl.pathname;
+      } catch (_e) {
+        // Fallback: if newUrl is a path-like string possibly containing a query, strip the query manually
+        url.pathname = (newUrl || '').split('?')[0];
+      }
     }
 
     if (url.href !== window.location.href) {

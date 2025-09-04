@@ -139,21 +139,21 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "group_MK6PAh": {
+        "group_Cj6CwQ": {
           "type": "group",
           "settings": {
             "link": "",
             "open_in_new_tab": false,
             "content_direction": "row",
             "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
+            "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 20,
             "width": "fill",
-            "custom_width": 67,
+            "custom_width": 60,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -172,26 +172,64 @@
             "overlay_style": "solid",
             "gradient_direction": "to top",
             "padding-block-start": 0,
-            "padding-block-end": 24,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_AeYPK8": {
+            "image_iXPRBF": {
+              "type": "image",
+              "name": "t:names.image",
+              "settings": {
+                "image": "shopify://shop_images/NITH_logo_Black_c643b717-4336-45d9-93be-99f2f66f8dbf.png",
+                "link": "",
+                "image_ratio": "adapt",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "custom",
+                "custom_width_mobile": 33,
+                "height": "fit",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "spacer_iTUpC8": {
+              "type": "spacer",
+              "name": "t:names.spacer",
+              "settings": {
+                "size": "pixel",
+                "percent_size": 100,
+                "pixel_size": 252,
+                "custom_mobile_size": false,
+                "size_mobile": "percent",
+                "percent_size_mobile": 100,
+                "pixel_size_mobile": 120
+              },
+              "blocks": {}
+            },
+            "group_X8M7DT": {
               "type": "group",
+              "name": "Our Vision",
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
-                "content_direction": "row",
+                "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
-                "vertical_alignment": "flex-start",
+                "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 20,
-                "width": "fill",
-                "custom_width": 60,
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 50,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
@@ -215,7 +253,59 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "group_Mk7zmd": {
+                "text_YynaxP": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>Our Vision</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h5",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_NNgnV7": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Needles in the Hay is a place where you can find high quality natural fibres in a myriad of beautiful colours, and socialize with people who share your passion for fibre arts. We work hard to bring you the best selection of high quality yarns at a variety of price points and we search high and low to make sure you’re getting the best products at the best value. We have a special passion for wool, but you’ll also find alpaca, silk, linen and more.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "group_XpRMKJ": {
                   "type": "group",
                   "name": "Social",
                   "settings": {
@@ -230,7 +320,7 @@
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
                     "width": "custom",
-                    "custom_width": 100,
+                    "custom_width": 50,
                     "width_mobile": "fit-content",
                     "custom_width_mobile": 100,
                     "height": "fit",
@@ -361,8 +451,68 @@
                     "text_AkDtjY",
                     "group_KFfwJe"
                   ]
-                },
-                "menu_F6QtGN": {
+                }
+              },
+              "block_order": [
+                "text_YynaxP",
+                "text_NNgnV7",
+                "group_XpRMKJ"
+              ]
+            },
+            "spacer_W8Xca4": {
+              "type": "spacer",
+              "name": "t:names.spacer",
+              "settings": {
+                "size": "pixel",
+                "percent_size": 100,
+                "pixel_size": 252,
+                "custom_mobile_size": false,
+                "size_mobile": "percent",
+                "percent_size_mobile": 100,
+                "pixel_size_mobile": 120
+              },
+              "blocks": {}
+            },
+            "group_BzRCh7": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 33,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "menu_HNHHnf": {
                   "type": "menu",
                   "settings": {
                     "menu": "main-menu",
@@ -381,105 +531,52 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
-                },
-                "group_X8M7DT": {
-                  "type": "group",
-                  "name": "Our Vision",
-                  "settings": {
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "center",
-                    "gap": 12,
-                    "width": "custom",
-                    "custom_width": 100,
-                    "width_mobile": "custom",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "text_YynaxP": {
-                      "type": "text",
-                      "name": "t:names.heading",
-                      "settings": {
-                        "text": "<h2>Our Vision</h2>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "h5",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "text_NNgnV7": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>Needles in the Hay is a place where you can find high quality natural fibres in a myriad of beautiful colours, and socialize with people who share your passion for fibre arts. We work hard to bring you the best selection of high quality yarns at a variety of price points and we search high and low to make sure you’re getting the best products at the best value. We have a special passion for wool, but you’ll also find alpaca, silk, linen and more.</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_YynaxP",
-                    "text_NNgnV7"
-                  ]
-                },
-                "menu_FdU36R": {
+                }
+              },
+              "block_order": [
+                "menu_HNHHnf"
+              ]
+            },
+            "group_NGULGY": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 33,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "menu_64mmEL": {
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
@@ -502,15 +599,17 @@
                 }
               },
               "block_order": [
-                "group_Mk7zmd",
-                "menu_F6QtGN",
-                "group_X8M7DT",
-                "menu_FdU36R"
+                "menu_64mmEL"
               ]
             }
           },
           "block_order": [
-            "group_AeYPK8"
+            "image_iXPRBF",
+            "spacer_iTUpC8",
+            "group_X8M7DT",
+            "spacer_W8Xca4",
+            "group_BzRCh7",
+            "group_NGULGY"
           ]
         },
         "footer_utilities_iTnDrc": {
@@ -553,7 +652,7 @@
         }
       },
       "block_order": [
-        "group_MK6PAh",
+        "group_Cj6CwQ",
         "footer_utilities_iTnDrc"
       ],
       "name": "Footer",
