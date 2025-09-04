@@ -19,7 +19,7 @@
             "text": "<h1>{{ closest.page.title }}</h1>",
             "width": "100%",
             "max_width": "normal",
-            "alignment": "center",
+            "alignment": "left",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -53,10 +53,10 @@
         "gap": 32,
         "color_scheme": "",
         "padding-block-start": 40,
-        "padding-block-end": 46
+        "padding-block-end": 80
       }
     },
-    "staff_list_4B8xye": {
+    "staff_list_cRNEUT": {
       "type": "staff-list",
       "name": "Staff List",
       "settings": {
@@ -68,6 +68,6 @@
   },
   "order": [
     "main",
-    "staff_list_4B8xye"
+    "staff_list_cRNEUT"
   ]
 }

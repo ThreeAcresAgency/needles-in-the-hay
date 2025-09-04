@@ -20,8 +20,8 @@
             "text": "Worried you won't receive your order? Shipping exclusively through UPS during the Canada Post Strike.",
             "link": "shopify://policies/shipping-policy",
             "font": "var(--font-primary--family)",
-            "font_size": "var(--font-size--body-md)",
-            "weight": "",
+            "font_size": "0.875rem",
+            "weight": "600",
             "letter_spacing": "normal",
             "case": "none"
           },
@@ -35,7 +35,7 @@
       "settings": {
         "speed": 5,
         "section_width": "full-width",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-f477f58d-3f2a-446f-b042-a56b62fbfaa2",
         "divider_width": 0,
         "padding-block-start": 15,
         "padding-block-end": 15
@@ -61,11 +61,11 @@
           "settings": {
             "hide_logo_on_home_page": false,
             "custom_height": 100,
-            "custom_height_mobile": 80,
-            "padding-block-start": 16,
-            "padding-block-end": 16,
+            "custom_height_mobile": 100,
+            "padding-block-start": 21,
+            "padding-block-end": 40,
             "padding-inline-start": 10,
-            "padding-inline-end": 10
+            "padding-inline-end": 21
           },
           "blocks": {}
         },
@@ -77,15 +77,15 @@
             "menu_style": "featured_products",
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "adapt",
-            "image_border_radius": 0,
+            "image_border_radius": 15,
             "product_title_case": "default",
             "collection_title_case": "default",
             "color_scheme": "",
             "menu_font_style": "inverse",
-            "type_font_primary_link": "primary",
-            "type_font_primary_size": "var(--font-size--body-md)",
+            "type_font_primary_link": "body",
+            "type_font_primary_size": "1rem",
             "type_case_primary_link": "none",
-            "type_font_secondary_link": "secondary",
+            "type_font_secondary_link": "subheading",
             "type_case_secondary_link": "none",
             "type_font_tertiary_link": "secondary",
             "type_case_tertiary_link": "none",
@@ -98,6 +98,9 @@
           "blocks": {}
         }
       },
+      "custom_css": [
+        ".header-logo__image-container{padding: 15px;}"
+      ],
       "settings": {
         "logo_position": "left",
         "menu_position": "center",
@@ -111,7 +114,7 @@
         "localization_position": "right",
         "localization_row": "top",
         "section_width": "page-width",
-        "section_height": "compact",
+        "section_height": "standard",
         "enable_sticky_header": "scroll-up",
         "divider_width": 0,
         "divider_size": "page-width",

@@ -2,11 +2,21 @@
   Section: Staff List
   Displays all active staff metaobjects with name, image, and description.
   Layout: Name top left, image below (1/4), description right (3/4).
-  Staff are sorted alphabetically by name.
+  Staff are sorted with positioned entries first (ascending by position),
+  followed by remaining entries alphabetically by name.
 {% endcomment %}
 
 {% assign all_staff = shop.metaobjects.staff.values %}
-{% assign staff_sorted = all_staff | sort: "name" %}
+
+{%- liquid
+  assign staff_with_position = all_staff | reject: "position", blank
+  assign staff_without_position = all_staff | where: "position", blank
+
+  assign staff_with_position_sorted = staff_with_position | sort: "position"
+  assign staff_without_position_sorted = staff_without_position | sort: "name"
+
+  assign staff_sorted = staff_with_position_sorted | concat: staff_without_position_sorted
+-%}
 
 <div class="section section--{{ section.settings.section_width }}" style="{% render 'spacing-padding', settings: section.settings %}">
   <div class="staff-list">

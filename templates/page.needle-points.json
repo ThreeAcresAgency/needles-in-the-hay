@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "1754598215fcadc6a6": {
+      "type": "_blocks",
+      "blocks": {
+        "smile_io_smile_landing_page_header_ECK8Bw": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-header/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "Welcome to our rewards page",
+            "description_text": "Earn reward points on every purchase. Redeem for discounts on future purchases.",
+            "join_button_text": "Join now",
+            "login_button_text": "Log in",
+            "is_previewing_logged_in_state": false,
+            "discover_button_text": "Discover the loyalty program"
+          }
+        },
+        "smile_io_smile_landing_page_how_it_works_Y7Jx7J": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-how-it-works/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "How it works",
+            "step1_heading_text": "Join",
+            "step1_description_text": "Sign up or login to start earning straight away.",
+            "step2_heading_text": "Earn",
+            "step2_description_text": "Earn points for every dollar spent.",
+            "step3_heading_text": "Redeem",
+            "step3_description_text": "Redeem points for discounts on your next purchase."
+          }
+        },
+        "smile_io_smile_landing_page_redeeming_rule_highlight_CGR4Yi": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-redeeming-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "Redeem points for rewards",
+            "description_text": "Redeem points on your next purchase, or save them up for higher value rewards.",
+            "button_text": "Ways to redeem"
+          }
+        },
+        "smile_io_smile_landing_page_earning_rule_highlight_XmzpEq": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-earning-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "Earn points for every order placed",
+            "description_text": "The more you spend, the more you save.",
+            "button_text": "Ways to earn"
+          }
+        }
+      },
+      "block_order": [
+        "smile_io_smile_landing_page_header_ECK8Bw",
+        "smile_io_smile_landing_page_how_it_works_Y7Jx7J",
+        "smile_io_smile_landing_page_redeeming_rule_highlight_CGR4Yi",
+        "smile_io_smile_landing_page_earning_rule_highlight_XmzpEq"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1754598215fcadc6a6"
+  ]
+}

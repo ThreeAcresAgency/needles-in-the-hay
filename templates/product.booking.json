@@ -18,7 +18,7 @@
           "settings": {
             "product": "{{ closest.product }}",
             "media_presentation": "grid",
-            "media_columns": "two",
+            "media_columns": "one",
             "image_gap": 12,
             "large_first_image": true,
             "icons_style": "chevron",
@@ -98,6 +98,7 @@
             },
             "price_a7krng": {
               "type": "price",
+              "disabled": true,
               "settings": {
                 "product": "{{ closest.product }}",
                 "show_sale_price_first": true,
@@ -122,6 +123,7 @@
             "swatch_variant_picker_NrgPUW": {
               "type": "swatch-variant-picker",
               "name": "Swatch variant picker",
+              "disabled": true,
               "settings": {
                 "product": "{{ closest.product }}",
                 "show_variant_images": true,
@@ -137,6 +139,7 @@
             "product_inventory_mUymBq": {
               "type": "product-inventory",
               "name": "t:names.product_inventory",
+              "disabled": true,
               "settings": {
                 "product": "{{ closest.product }}",
                 "inventory_threshold": 15,
@@ -150,6 +153,7 @@
             },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
+              "disabled": true,
               "settings": {
                 "product": "{{ closest.product }}",
                 "stacking": true,
@@ -191,6 +195,7 @@
             },
             "afterpay_on_site_messaging_payments_messaging_mHBaNf": {
               "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+              "disabled": true,
               "settings": {
                 "text_align": "inherit",
                 "margin_top": 16,
@@ -218,6 +223,7 @@
             "product_upsell_EJCc6F": {
               "type": "product_upsell",
               "name": "Add to Order",
+              "disabled": true,
               "settings": {},
               "blocks": {}
             },
@@ -246,6 +252,14 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "custom_liquid_Kha7Xp": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "{% comment %}\n  Cal.com booking embed that uses a metafield for the URL\n  Requires: custom.cal_com_url metafield with the full Cal.com URL (scoped to product)\n{% endcomment %}\n\n{% comment %} Access the product-scoped metafield {% endcomment %}\n{% assign cal_url = product.metafields.custom.cal_com_url.value %}\n\n{% comment %} Debug output - remove this after troubleshooting {% endcomment %}\n<!-- Debug: Product metafield value: {{ cal_url | json }} -->\n<!-- Debug: Product object: {{ product | json }} -->\n\n{% if cal_url != blank %}\n  {% comment %} Extract the calLink from the full URL {% endcomment %}\n  {% assign cal_link = cal_url | remove: 'https://cal.com/' %}\n  \n  <!-- Cal inline embed code begins -->\n  <div style=\"width:100%;height:100%;overflow:scroll\" id=\"my-cal-inline-booking\"></div>\n  <script type=\"text/javascript\">\n    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement(\"script\")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === \"string\"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, [\"initNamespace\", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, \"https://app.cal.com/embed/embed.js\", \"init\");\n    Cal(\"init\", \"booking\", {origin:\"https://app.cal.com\"});\n\n    Cal.ns[\"booking\"](\"inline\", {\n      elementOrSelector:\"#my-cal-inline-booking\",\n      config: {\"layout\":\"month_view\"},\n      calLink: \"{{ cal_link }}\",\n    });\n\n    Cal.ns[\"booking\"](\"ui\", {\"hideEventTypeDetails\":false,\"layout\":\"month_view\"});\n  </script>\n  <!-- Cal inline embed code ends -->\n{% else %}\n  <div class=\"booking-placeholder\">\n    <p>Booking calendar not configured. Please set the custom.cal_com_url metafield on this product.</p>\n    <p><strong>Debug Info:</strong></p>\n    <ul>\n      <li>product.metafields.custom.cal_com_url.value: {{ product.metafields.custom.cal_com_url.value | json }}</li>\n      <li>Product handle: {{ product.handle | json }}</li>\n      <li>Product title: {{ product.title | json }}</li>\n    </ul>\n    <p><strong>Note:</strong> This metafield must be set on the individual product page where this booking form appears.</p>\n  </div>\n{% endif %}"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -257,7 +271,8 @@
             "buy_buttons_eYQEYi",
             "afterpay_on_site_messaging_payments_messaging_mHBaNf",
             "product_upsell_EJCc6F",
-            "product_description_LfDYCg"
+            "product_description_LfDYCg",
+            "custom_liquid_Kha7Xp"
           ]
         }
       },
@@ -455,6 +470,7 @@
       "block_order": [
         "text_yJVC7J"
       ],
+      "disabled": true,
       "name": "t:names.product_recommendations",
       "settings": {
         "product": "{{ closest.product }}",
@@ -490,6 +506,7 @@
       "block_order": [
         "junip_junip_product_review_mNgmTe"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -499,7 +516,7 @@
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
-        "section_width": "full-width",
+        "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
         "color_scheme": "",
